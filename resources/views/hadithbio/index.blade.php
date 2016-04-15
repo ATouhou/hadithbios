@@ -12,6 +12,7 @@
 
 <div class="container">
     <h2>Narrator and Transmitter Bios</h2>
+      <a href="home/input" class="btn btn-primary" role="button">Add New Bio</a>
       <table class="table table-hover">
         <thead>
           <tr>
