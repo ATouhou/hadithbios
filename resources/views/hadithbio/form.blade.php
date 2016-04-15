@@ -32,4 +32,9 @@
         <input name="_token" type="hidden" value="{{ csrf_token() }}"/>        
     </form>
 </div>
+<div id="somecomponent" style="width: 500px; height: 400px;"></div>
+<script>
+$('#somecomponent').locationpicker();
+</script>
+
 @stop
