@@ -11,7 +11,10 @@ use \Input;
 class HomeController extends Controller
 {
     public function getIndex() {
-        return view('home.hello');
+        $hadithBios = Hadithbio::all();
+        $data = array();
+        $data['hadithBios'] = $hadithBios;
+        return view('hadithbio.index', $data);
     }
     
     public function getInput() {
