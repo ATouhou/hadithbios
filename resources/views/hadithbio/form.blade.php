@@ -12,23 +12,24 @@
 
 <div class="container">
     <h2>Narrator and Transmitter Bios</h2>
+    <a href="{{ URL::to('home') }}" class="btn btn-primary" role="button">Back To List</a>    
     <form class="form-horizontal" role="form" action="{{ action('HomeController@postSave') }}" method="post">
         <div class="form-group" >
             <label class="control-label col-sm-2" for="name">Name of narrator / transmitter</label>
             <div class="col-sm-10">
-                <input class="form-control" type="text" name="name"/>
+                <input class="form-control" type="text" name="name" value="{{ $row['name'] }}" />
             </div>                  
         </div>
         <div class="form-group" >
             <label class="control-label col-sm-2" for="date_of_birth">Date Of Birth</label>
             <div class="col-sm-10">
-                <input class="form-control" type="date" name="date_of_birth" />
+                <input class="form-control" type="date" name="date_of_birth" value="{{ $row['date_of_birth'] }}" />
             </div>                
         </div>
         <div class="form-group" >
             <label class="control-label col-sm-2" for="date_of_death">Date Of Death</label>
             <div class="col-sm-10">            
-                <input class="form-control" type="date" name="date_of_death" />
+                <input class="form-control" type="date" name="date_of_death" value="{{ $row['date_of_death'] }}" />
             </div>                  
         </div>
         <div class="form-group" >

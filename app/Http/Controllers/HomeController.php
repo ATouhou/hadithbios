@@ -17,8 +17,15 @@ class HomeController extends Controller
         return view('hadithbio.index', $data);
     }
     
-    public function getInput() {
-        return view("hadithbio.form");
+    public function getInput($id = 0) {
+        if ($id == 0) {
+            $row = new Hadithbio();
+        } else {
+            $row = Hadithbio::find($id);
+        }
+        $data = array();
+        $data['row'] = $row;
+        return view("hadithbio.form", $data);
     }
     
     public function postSave() {
