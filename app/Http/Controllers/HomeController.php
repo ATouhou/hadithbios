@@ -68,4 +68,8 @@ class HomeController extends Controller
     public function getTestmodels() {
         $newBio = new Hadithbio();
     }
+    
+    public function getTestlocation() {
+        return view("hadithbio.test2");        
+    }
 }

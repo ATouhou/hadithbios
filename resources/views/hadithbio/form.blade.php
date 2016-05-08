@@ -23,6 +23,10 @@
                 <input class="form-control" type="date" name="date_of_death" value="{{ $row['date_of_death'] }}" />
             </div>                  
         </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="somecomponent">Location</label>
+            <div class="col-sm-10" id="somecomponent" style="width: 500px; height: 400px;"></div>
+        </div>        
         <div class="form-group" >
             <div class="col-sm-10">
                 <button type="submit" class="btn btn-primary" name="submit"/>Submit</button>
@@ -32,9 +36,8 @@
         <input name="_token" type="hidden" value="{{ csrf_token() }}"/>        
     </form>
 </div>
-<div id="somecomponent" style="width: 500px; height: 400px;"></div>
-<script>
-$('#somecomponent').locationpicker();
-</script>
 
+<script>
+    $('#somecomponent').locationpicker();
+</script>
 @stop
