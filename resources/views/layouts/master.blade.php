@@ -13,8 +13,7 @@
     <script src="{{ secure_asset('js/locationpicker.jquery.js') }}"></script>
 </head>
 <body>
-<html>
-    
+
 <div class="page-container"
 	<!-- top navbar -->
     <!--
@@ -46,7 +45,7 @@
         </div>
       
         <!-- main area -->
-        <div class="col-xs-128 col-sm-6">
+        <div class="col-xs-12 col-sm-6">
             <div class="container ">
                 <h2>Narrator and Transmitter Bios @yield('title')</h2>   
             </div>
