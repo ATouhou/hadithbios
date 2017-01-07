@@ -24,9 +24,31 @@
             </div>                  
         </div>
         <div class="form-group">
-            <label class="control-label col-sm-2" for="somecomponent">Location</label>
-            <div class="col-sm-10" id="somecomponent" style="width: 500px; height: 400px;"></div>
-        </div>        
+            <label class="col-sm-2 control-label">Location:</label>
+
+            <div class="col-sm-10"><input type="text" class="form-control" id="us2-address"/></div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Radius:</label>
+
+            <div class="col-sm-10"><input type="text" class="form-control" id="us2-radius"/></div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="us2">Map</label>
+            <div class="col-sm-10" id="us2" style="width: 500px; height: 400px;"></div>
+        </div>           
+        <div class="clearfix">&nbsp;</div>
+        <div class="m-t-small">
+            <label class="p-r-small col-sm-2 control-label">Lat.:</label>
+
+            <div class="col-sm-2"><input type="text" class="form-control" style="width: 110px" id="us2-lat"/>
+            </div>
+            <label class="p-r-small col-sm-2 control-label">Long.:</label>
+
+            <div class="col-sm-2"><input type="text" class="form-control" style="width: 110px" id="us2-lon"/>
+            </div>
+        </div>
+        <div class="clearfix"></div>
         <div class="form-group" >
             <div class="col-sm-10">
                 <button type="submit" class="btn btn-primary" name="submit"/>Submit</button>
@@ -37,6 +59,25 @@
     </form>
 </div>
 
+
+
+
+
+            <script>
+                $('#us2').locationpicker({
+                    location: {latitude: 46.15242437752303, longitude: 2.7470703125},
+                    radius: 300,
+                    inputBinding: {
+                        latitudeInput: $('#us2-lat'),
+                        longitudeInput: $('#us2-lon'),
+                        radiusInput: $('#us2-radius'),
+                        locationNameInput: $('#us2-address')
+                    },
+                    enableAutocomplete: true
+                });
+            </script>
+
+        
 <script>
     $('#somecomponent').locationpicker();
 </script>
