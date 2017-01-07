@@ -58,27 +58,17 @@
         <input name="_token" type="hidden" value="{{ csrf_token() }}"/>        
     </form>
 </div>
-
-
-
-
-
-            <script>
-                $('#us2').locationpicker({
-                    location: {latitude: 46.15242437752303, longitude: 2.7470703125},
-                    radius: 300,
-                    inputBinding: {
-                        latitudeInput: $('#us2-lat'),
-                        longitudeInput: $('#us2-lon'),
-                        radiusInput: $('#us2-radius'),
-                        locationNameInput: $('#us2-address')
-                    },
-                    enableAutocomplete: true
-                });
-            </script>
-
-        
 <script>
-    $('#somecomponent').locationpicker();
+    $('#us2').locationpicker({
+        location: {latitude: 46.15242437752303, longitude: 2.7470703125},
+        radius: 300,
+        inputBinding: {
+            latitudeInput: $('#us2-lat'),
+            longitudeInput: $('#us2-lon'),
+            radiusInput: $('#us2-radius'),
+            locationNameInput: $('#us2-address')
+        },
+        enableAutocomplete: true
+    });
 </script>
 @stop
