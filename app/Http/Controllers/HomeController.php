@@ -19,11 +19,14 @@ class HomeController extends Controller
     
     public function getInput($id = 0) {
         if ($id == 0) {
+            $row = Hadithbio::createSahaba();
+            /*
             $row = new Hadithbio();
             $row->date_of_birth="0600-01-01";
             $row->date_of_death = "0650-01-01";
             $row->lat = 24.5246542;
             $row->lon = 39.56918410000003;
+            */
         } else {
             $row = Hadithbio::find($id);
         }
