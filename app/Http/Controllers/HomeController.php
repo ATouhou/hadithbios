@@ -20,6 +20,10 @@ class HomeController extends Controller
     public function getInput($id = 0) {
         if ($id == 0) {
             $row = new Hadithbio();
+            $row->date_of_birth="0600-01-01";
+            $row->date_of_death = "0650-01-01";
+            $row->lat = 24.5246542;
+            $row->lon = 39.56918410000003;
         } else {
             $row = Hadithbio::find($id);
         }
@@ -28,12 +32,14 @@ class HomeController extends Controller
         return view("hadithbio.form", $data);
     }
     
-    public function postSave() {
+    public function postSave(Request $request) {
         
         $newBio = new Hadithbio();
-        $newBio->name = Input::get('name');
-        $newBio->date_of_birth = Input::get('date_of_birth');
-        $newBio->date_of_death = Input::get('date_of_death');        
+        $newBio->name = $request->get('name');
+        $newBio->date_of_birth = $request->get('date_of_birth');
+        $newBio->date_of_death = $request->get('date_of_death');        
+        $newBio->lat = $request->get('lat');
+        $newBio->lon = $request->get('lon');
         
         if ($newBio->save()) {
             return "Saved successfully!";

@@ -41,11 +41,17 @@
         <div class="m-t-small">
             <label class="p-r-small col-sm-2 control-label">Lat.:</label>
 
-            <div class="col-sm-2"><input type="text" class="form-control" style="width: 110px" id="us2-lat"/>
+            <div class="col-sm-2">
+                <input  type="text" class="form-control" 
+                        style="width: 110px" id="us2-lat" name="lat"
+                        value="{{ $row['lat'] }}" />
             </div>
             <label class="p-r-small col-sm-2 control-label">Long.:</label>
 
-            <div class="col-sm-2"><input type="text" class="form-control" style="width: 110px" id="us2-lon"/>
+            <div class="col-sm-2">
+                <input  type="text" class="form-control" 
+                        style="width: 110px" id="us2-lon" name="lon"
+                        value="{{ $row['lon'] }}" />
             </div>
         </div>
         <div class="clearfix"></div>
@@ -60,7 +66,7 @@
 </div>
 <script>
     $('#us2').locationpicker({
-        location: {latitude: 46.15242437752303, longitude: 2.7470703125},
+        location: {latitude: {{ $row['lat'] }}, longitude: {{ $row['lon'] }} },
         radius: 300,
         inputBinding: {
             latitudeInput: $('#us2-lat'),

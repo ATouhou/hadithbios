@@ -33,5 +33,6 @@ class CreateHadithbiosTable extends Migration
     public function down()
     {
         //
+        Schema::drop('hadithbios');
     }
 }
