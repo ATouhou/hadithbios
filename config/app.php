@@ -155,6 +155,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
+        'Folklore\GraphQL\ServiceProvider'
 
     ],
 
@@ -202,6 +204,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Input' => Illuminate\Support\Facades\Input::class,
+        
+        'GraphQL' => 'Folklore\GraphQL\Support\Facades\GraphQL',    
 
     ],
 
